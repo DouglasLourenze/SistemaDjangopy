@@ -1,12 +1,69 @@
+{% load staticfiles %}
 <html>
-<head><title></title></head>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Atividades</title>
+    <link rel="stylesheet" href="{% static 'css/Stylesheet1.css' %}"
 
+</head>
 <body>
+    <div class="testbox">
+        <form action="/">
+            <h1>Cadastro de Atividades do Suporte</h1>
+            <div class="clearfix">
+                <div id="left">
+                    <h4>Executor<span>*</span></h4>
 
-    {{ content }}
-    <h1>Essa é minha pagina HOME!</h1>
-    <p>
-        Bem viendo a lo mejor site de todo el mundo.
-    </p>
+                    <select>
+                        <option value="" selected></option>
+                        <option value="douglas">Douglas</option>
+                        <option value="rafael">Rafael</option>
+                        <option value="kevin">Kevin</option>
+                        <option value="eduardo">Eduardo</option>
+                    </select>
+
+                    <h4>Origem do Equipamento<span>*</span></h4>
+
+                    <input class="name" type="text" name="origemequipamento" />
+
+                    <h4>Destino do Equipamento<span>*</span></h4>
+
+                    <input class="name" type="text" name="destinoequipamento" />
+                </div>
+                <div id="right">
+                    <h4>Tipo de Equipamento<span>*</span></h4>
+
+                    <select>
+                        <option value="" selected></option>
+                        <option value="computador">Computador</option>
+                        <option value="notebook">Notebook</option>
+                        <option value="monitor">Monitor</option>
+                        <option value="teclado">Teclado</option>
+                        <option value="mouse">Mouse</option>
+                        <option value="headset">Headset</option>
+                        <option value="impressora">Impressora</option>
+                        <option value="equipamentorede">Equipamento de Rede</option>
+                        <option value="caboseconectores">Cabos e Conectores</option>
+                    </select>
+                    <h4>Info do Equipamento (EJCJ, Modelo, Marca)<span>*</span></h4>
+                    <input class="name" type="text" name="identificacaoequipamento" />
+                    <h4>Chamado OTRS referente</h4>
+                    <input class="name" type="text" name="idchamado" />
+                </div>
+            </div>
+                         
+     
+
+            <h4>Atividade Realizada</h4>
+            <p class="small">
+                Por favor descreva com detalhes as atividades realizadas no atendimento.</small>
+                <textarea rows="5"></textarea>
+                <div class="btn-block">
+                    <button type="submit" href="/">Cadastrar</button>
+       
+                    <button type="submit" href="/">Limpar</button>
+                </div>
+</form>
+    </div>
 </body>
 </html>

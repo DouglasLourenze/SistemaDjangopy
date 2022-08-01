@@ -47,6 +47,7 @@
     <Compile Include="SistemaDjangopy\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\css\Stylesheet1.css" />
     <Content Include="app\templates\app\home.html" />
     <Content Include="app\templates\app\index.html" />
     <Content Include="requirements.txt" />
@@ -54,6 +55,8 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\css\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
     <Folder Include="SistemaDjangopy\" />

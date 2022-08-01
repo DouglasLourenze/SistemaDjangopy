@@ -7,7 +7,7 @@ from app import templates
 # Create your views here.
 
 def index(Request):
-    template = loader.get_template('app/home.html')
+    template = loader.get_template('app/index.html')
     return HttpResponse(template.render())
     #return HttpResponse("Hello world!")
     #return render(Request, 'templates/home.html', context)
