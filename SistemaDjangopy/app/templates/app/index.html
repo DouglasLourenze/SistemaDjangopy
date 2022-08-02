@@ -66,6 +66,8 @@
                 </div>
                 <br></br>
                 <!– essa parte de codigo abaixo é referente ao select dos arquivos do banco de dados->
+                <h1>Atividades Realizadas</h1>
+                <br></br>
                 <div class="clearfix">
                     <table class="table">
                         <thead>
@@ -78,6 +80,7 @@
                                 <th>Info de Equipamento</th>
                                 <th>ID Chamado OTRS</th>
                                 <th>Atividade Realizada</th>
+                                <th>Ação</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -91,6 +94,9 @@
                                 <td>{{ativ.infoequipamento}}</td>
                                 <td>{{ativ.chamadootrs}}</td>
                                 <td>{{ativ.atividaderealizada}}</td>
+                                <td>
+                                    <button type="submit" class="btn-delete">Excluir</button>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>

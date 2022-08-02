@@ -147,7 +147,18 @@ textarea {
     margin-top: 20px;
     text-align: center;
 }
-
+.btn-delete {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: red;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
 button {
     width: 150px;
     padding: 10px;
