@@ -1,1 +1,5 @@
-django==2.2.27
+Django==2.2.27
+pip==21.2.3
+pytz==2022.1
+setuptools==57.4.0
+sqlparse==0.4.2

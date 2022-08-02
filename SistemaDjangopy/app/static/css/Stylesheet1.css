@@ -73,6 +73,8 @@ select {
 
 select, table {
     width: 100%;
+    
+
 }
 
 option {
@@ -128,7 +130,9 @@ th, td {
     line-height: 18px;
     font-weight: 400;
     word-break: break-all;
+    border: 1px solid black;
 }
+
 
 .first-col {
     width: 25%;

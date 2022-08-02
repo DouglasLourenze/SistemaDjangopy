@@ -8,13 +8,14 @@
 </head>
 <body>
     <div class="testbox">
-        <form action="/">
+        <form method="POST" class="post-form" action="#">
+            {% csrf_token %}
             <h1>Cadastro de Atividades do Suporte</h1>
             <div class="clearfix">
                 <div id="left">
                     <h4>Executor<span>*</span></h4>
 
-                    <select>
+                    <select name="executor">
                         <option value="" selected></option>
                         <option value="douglas">Douglas</option>
                         <option value="rafael">Rafael</option>
@@ -24,16 +25,16 @@
 
                     <h4>Origem do Equipamento<span>*</span></h4>
 
-                    <input class="name" type="text" name="origemequipamento" />
+                    <input class="name" type="text" name="origequipamento" />
 
                     <h4>Destino do Equipamento<span>*</span></h4>
 
-                    <input class="name" type="text" name="destinoequipamento" />
+                    <input class="name" type="text" name="destequipamento" />
                 </div>
                 <div id="right">
                     <h4>Tipo de Equipamento<span>*</span></h4>
 
-                    <select>
+                    <select name="tipoequipamento">
                         <option value="" selected></option>
                         <option value="computador">Computador</option>
                         <option value="notebook">Notebook</option>
@@ -46,22 +47,54 @@
                         <option value="caboseconectores">Cabos e Conectores</option>
                     </select>
                     <h4>Info do Equipamento (EJCJ, Modelo, Marca)<span>*</span></h4>
-                    <input class="name" type="text" name="identificacaoequipamento" />
+                    <input class="name" type="text" name="infoequipamento" />
                     <h4>Chamado OTRS referente</h4>
-                    <input class="name" type="text" name="idchamado" />
+                    <input class="name" type="text" name="chamadootrs" />
                 </div>
             </div>
-                         
-     
+
+
 
             <h4>Atividade Realizada</h4>
             <p class="small">
                 Por favor descreva com detalhes as atividades realizadas no atendimento.</small>
-                <textarea rows="5"></textarea>
+                <textarea name="atividaderealizada" rows="5"></textarea>
                 <div class="btn-block">
-                    <button type="submit" href="/">Cadastrar</button>
-       
+                    <button type="submit">Cadastrar</button>
+
                     <button type="submit" href="/">Limpar</button>
+                </div>
+                <br></br>
+                <!– essa parte de codigo abaixo é referente ao select dos arquivos do banco de dados->
+                <div class="clearfix">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Executor</th>
+                                <th>Tipo de Equipamento</th>
+                                <th>Origem</th>
+                                <th>Destino</th>
+                                <th>Info de Equipamento</th>
+                                <th>ID Chamado OTRS</th>
+                                <th>Atividade Realizada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ativ in atividade %}
+                            <tr>
+                                <td>{{ativ.id}}</td>
+                                <td>{{ativ.executor}}</td>
+                                <td>{{ativ.tipoequipamento}}</td>
+                                <td>{{ativ.origequipamento}}</td>
+                                <td>{{ativ.destequipamento}}</td>
+                                <td>{{ativ.infoequipamento}}</td>
+                                <td>{{ativ.chamadootrs}}</td>
+                                <td>{{ativ.atividaderealizada}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
 </form>
     </div>

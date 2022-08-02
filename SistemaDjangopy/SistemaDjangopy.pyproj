@@ -4,6 +4,7 @@
     <Name>SistemaDjangopy</Name>
     <RootNamespace>SistemaDjangopy</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -32,6 +33,9 @@
   <ItemGroup>
     <Compile Include="app\admin.py" />
     <Compile Include="app\apps.py" />
+    <Compile Include="app\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\migrations\__init__.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\tests.py" />
