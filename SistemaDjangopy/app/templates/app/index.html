@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>Cadastro de Atividades</title>
-    <link rel="stylesheet" href="{% static 'css/Stylesheet1.css' %}"
-
+    <link rel="stylesheet" href="{% static 'css/Stylesheet1.css' %}"/>
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}"/>
 </head>
 <body>
     <div class="testbox">
@@ -15,7 +15,7 @@
                 <div id="left">
                     <h4>Executor<span>*</span></h4>
 
-                    <select name="executor" required>
+                    <select name="executor" required class="dropdown">
                         <option value="" selected></option>
                         <option value="douglas">Douglas</option>
                         <option value="rafael">Rafael</option>
@@ -34,7 +34,7 @@
                 <div id="right">
                     <h4>Tipo de Equipamento<span>*</span></h4>
 
-                    <select name="tipoequipamento" required>
+                    <select name="tipoequipamento" class="dropdown" required>
                         <option value="" selected></option>
                         <option value="computador">Computador</option>
                         <option value="notebook">Notebook</option>

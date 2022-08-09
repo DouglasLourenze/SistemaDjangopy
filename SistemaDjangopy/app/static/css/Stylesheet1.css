@@ -8,13 +8,14 @@ body, div, form, input, select {
     outline: none;
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
-    color: #666;
+    color: #000000;
     line-height: 22px;
 }
 
-h1, h4 {
+h1 {
     margin: 15px 0 4px;
     font-weight: 400;
+    font-family:monospace;
 }
 
 h4 {
@@ -37,13 +38,17 @@ span {
     align-items: center;
     height: inherit;
     padding: 3px;
+    background-color: 	#A9A9A9;
 }
-
+.dropdown{
+    background-color: white;
+}
 form {
     width: 100%;
     padding: 20px;
     background: #fff;
     box-shadow: 0 2px 5px #ccc;
+    background-color: #D3D3D3;
 }
 
 input {
