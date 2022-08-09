@@ -15,7 +15,7 @@
                 <div id="left">
                     <h4>Executor<span>*</span></h4>
 
-                    <select name="executor">
+                    <select name="executor" required>
                         <option value="" selected></option>
                         <option value="douglas">Douglas</option>
                         <option value="rafael">Rafael</option>
@@ -25,16 +25,16 @@
 
                     <h4>Origem do Equipamento<span>*</span></h4>
 
-                    <input class="name" type="text" name="origequipamento" />
+                    <input class="name" type="text" name="origequipamento" required/>
 
                     <h4>Destino do Equipamento<span>*</span></h4>
 
-                    <input class="name" type="text" name="destequipamento" />
+                    <input class="name" type="text" name="destequipamento" required/>
                 </div>
                 <div id="right">
                     <h4>Tipo de Equipamento<span>*</span></h4>
 
-                    <select name="tipoequipamento">
+                    <select name="tipoequipamento" required>
                         <option value="" selected></option>
                         <option value="computador">Computador</option>
                         <option value="notebook">Notebook</option>
@@ -47,9 +47,9 @@
                         <option value="caboseconectores">Cabos e Conectores</option>
                     </select>
                     <h4>Info do Equipamento (EJCJ, Modelo, Marca)<span>*</span></h4>
-                    <input class="name" type="text" name="infoequipamento" />
+                    <input class="name" type="text" name="infoequipamento" required/>
                     <h4>Chamado OTRS referente</h4>
-                    <input class="name" type="text" name="chamadootrs" />
+                    <input class="name" type="text" name="chamadootrs"/>
                 </div>
             </div>
 
